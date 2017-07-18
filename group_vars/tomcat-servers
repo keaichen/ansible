@@ -1,0 +1,5 @@
+http_port: 55555
+https_port: 8555
+
+admin_username: admin
+admin_password: adminpassword

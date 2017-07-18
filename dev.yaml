@@ -1,2 +1,0 @@
-
-ansible-playbook -i inventory/[webservers] ./deploy.yml -e tag=$ver -e env=[webservers]
