@@ -1,5 +1,4 @@
 ---
-
 - hosts: webservers
   var_files:
      - groups-vars/tomcat-servers
