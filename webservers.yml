@@ -1,5 +1,4 @@
 ---
-
 - hosts: webservers
   vars: 
    http_port: 55555
