@@ -1,4 +1,4 @@
 ---
 
 - name: restart tomcat
-  service: name=tomcatSumapy state=restarted
+  service: name=tomcatSumpay state=restarted
