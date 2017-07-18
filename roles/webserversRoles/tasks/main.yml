@@ -26,7 +26,7 @@
   notify: restart tomcat
   
 - name: configure tomcat users
-  templeate: src=tomcat-users.xml dest=/usr/share/tomcat/conf
+  template: src=tomcat-users.xml dest=/usr/share/tomcat/conf
   notify: restart tomcat
 
 - name: install tomcat init script
