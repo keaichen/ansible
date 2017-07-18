@@ -1,4 +1,4 @@
 ---
 
-- name: restart jetty
-  service: name=jetty state=restarted
+- name: restart tomcat
+  service: name=tomcatSumapy state=restarted
