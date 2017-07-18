@@ -1,7 +1,7 @@
 ---
 
 - hosts: webservers
-  var_files: 
+  var_files:
      - groups-vars/tomcat-servers
-  roles: 
+  roles:
      - webserversRoles
