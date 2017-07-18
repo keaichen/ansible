@@ -1,7 +1,11 @@
 ---
 
 - hosts: webservers
-  var_files: 
-     - groups-vars/tomcat-servers
+  vars: 
+   http_port: 55555
+   https_port: 8555
+   admin_username: admin
+   admin_password: adminpassword
+  
   roles: 
      - webserversRoles
