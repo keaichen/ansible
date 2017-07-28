@@ -34,7 +34,7 @@
   
   
 - name: copy project to dest
-  copy: src=/sumpay/admin/.jenkins/jobs/rong-admin-dev/workspace/sumpay-admin-web/target/sumpay-admin-web-1.0.war   dest=/temp/apache-tomcat-7.0.61/webapps/sumpay-admin-web.war  mode=0755
+  copy: src=/sumpay/admin/.jenkins/jobs/rong-admin-dev/workspace/sumpay-admin-web/target/admin.war   dest=/temp/apache-tomcat-7.0.61/webapps/sumpay-admin-web.war  mode=0755
   
 - name: start tomcat
   service: name=tomcatSumpay state=started enabled=yes
