@@ -1,13 +1,4 @@
 ---
-
-- name: add group "tomcat"
-  group: name=tomcat
-  
-- name: add user "tomcat"
-  user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
-  become: True
-  become_method: sudo
-  
 - name: Download Tomcat
   get_url: url=http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.61/bin/apache-tomcat-7.0.61.tar.gz 
           dest=/home/admin/temp/apache-tomcat-7.0.61.tar.gz
@@ -18,15 +9,13 @@
 - name: Symlink install directory
   file: src=/home/admin/temp/apache-tomcat-7.0.61 path=/usr/share/tomcat state=link
   
-- name: change ownership of tomcat installation
-  file: path=/usr/share/tomcat/ owner=tomcat group=tomcat state=directory recurse=yes
 
 - name: configure tomcat server
-  template: src=server.xml dest=/usr/share/tomcat/conf/
+  template: src=server.xml dest=/home/admin/temp/apache-tomcat-7.0.61/conf/
   notify: restart tomcat
   
 - name: configure tomcat users
-  template: src=tomcat-users.xml dest=/usr/share/tomcat/conf
+  template: src=tomcat-users.xml dest=/home/admin/temp/apache-tomcat-7.0.61/conf
   notify: restart tomcat
 
 - name: install tomcat init script
