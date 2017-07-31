@@ -18,7 +18,7 @@
   copy: src=/sumpay/admin/.jenkins/jobs/rong-admin-dev/workspace/sumpay-admin-web/target/admin.war   dest=/home/admin/temp/apache-tomcat-7.0.61/webapps/sumpay-admin-web.war  mode=0755
     
 - name: start tomcat
-  command: /home/admin/temp/apache-tomcat-7.0.61/bin/start.sh start
+  command: /home/admin/temp/apache-tomcat-7.0.61/bin/startup.sh restart
   
 - name: wait for tomcat to start
   wait_for: port={{http_port}}
