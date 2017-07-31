@@ -4,7 +4,7 @@
           dest=/home/admin/temp/apache-tomcat-7.0.61.tar.gz
           
 - name: Extract archive
-  command: /bin/tar xvf /home/admin/temp/apache-tomcat-7.0.61.tar.gz -C /home/admin/temp/ creates=/home/admin/temp/apache-tomcat-7.0.61
+  command: /bin/tar xvf /home/admin/temp/apache-tomcat-7.0.61.tar.gz -C /home/admin/temp/
   
 - name: configure tomcat server
   template: src=server.xml dest=/home/admin/temp/apache-tomcat-7.0.61/conf/
