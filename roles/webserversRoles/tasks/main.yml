@@ -1,7 +1,4 @@
 ---
-- name: su admin
-  command: su admin
-  
 
 - name: Download Tomcat
   get_url: url=http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.61/bin/apache-tomcat-7.0.61.tar.gz 
@@ -23,8 +20,6 @@
     
 - name: start tomcat
   command: /home/admin/temp/apache-tomcat-7.0.61/bin/startup.sh start
-  
-- name: wait for tomcat to start
-  wait_for: port={{http_port}}
+
 
  
