@@ -43,4 +43,4 @@
 ## db-[99:101]-node.example.com
 
 [webservers]
-root@192.168.18.213 ansilbe_ssh_user=root
+root@192.168.18.213 ansilbe_ssh_user=admin
