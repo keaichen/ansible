@@ -1,8 +1,5 @@
 ---
 - hosts: webservers
-  remote_user: admin
-  become: yes
-  become_method: sudo
   vars: 
    http_port: 55555
    https_port: 8555
